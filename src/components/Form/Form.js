@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyledForm } from "./Form.styles";
 
 const initialList = [];
 
@@ -7,26 +6,25 @@ export const Form = () => {
     const [value, setValue] = React.useState('');
     const [list, setList] = React.useState(initialList);
 
-    const handleChange = event => {
+    const handleChange = (event) => {
         setValue(event.target.value);
     };
 
-    const handleSubmit = event => {
+    const handleSubmit = (event) => {
         if (value) {
             setList(list.concat(value));
         }
-
+    
         setValue('');
 
         event.preventDefault();
     };
 
     return (
-        <div>
+        <div className="comments-container">
                 <h3><i class="fas fa-comment-dots"></i>Comentários</h3>
                 <form onSubmit={handleSubmit}>
-                    <textarea type="text" value={value} onChange={handleChange} placeholder="Deixe aqui seu comentário!"></textarea>
-                    {/* <input type="text" value={value} onChange={handleChange} /> */}
+                    <textarea type="text" value={value} onChange={handleChange} placeholder="Deixe aqui seu nome e comentário sobre esse game!"></textarea>
                     <button type="submit">Enviar</button>
                 </form>
             
@@ -39,8 +37,6 @@ export const Form = () => {
         </div>
     );
 };
-
-
 
 
 

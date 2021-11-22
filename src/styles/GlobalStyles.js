@@ -191,4 +191,55 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 13px;
     }
 
+
+    /* Coments Styles */
+
+    .comments-container form {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+    }
+
+    .comments-container textarea {
+        border: 1px solid gray;
+        border-radius: 5px;
+        font-family: inherit;
+        width: 400px;
+        height: 60px;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .comments-container button {
+        background: -webkit-linear-gradient(to left, #48b1bf, #06beb6);
+        background: linear-gradient(to left, #48b1bf, #06beb6);
+        border: 1px solid #fff;
+        border-radius: 10px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: .4px;
+        width: 80px;
+        height: 30px;
+        margin: 5px;
+        text-transform: uppercase;
+        transition: all 400ms;
+    }
+
+    .comments-container button:hover {
+        transform: scale(.9);
+        opacity: .75;
+    }
+
+    .comments-container ul {
+        list-style: none;
+    }
+
+    .comments-container li {
+        margin: 10px;
+        padding: 5px;
+        border-bottom: 1px solid black;
+    }
+
 `
